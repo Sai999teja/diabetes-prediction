@@ -19,7 +19,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = int(prediction[0])
-    if (output ==0):
+    if (output ==1):
         return render_template('DiabetesIndex.html', prediction_text='Person is Suffering with diabetes')
     else:
         return render_template('DiabetesIndex.html', prediction_text='Person is not Suffering from diabetes')
